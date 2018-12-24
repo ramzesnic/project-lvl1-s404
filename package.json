@@ -1,0 +1,29 @@
+{
+  "name": "brain-game-roman-prj",
+  "version": "0.0.1",
+  "description": "Brain Games",
+  "main": "brain-games.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramzesnic/project-lvl1-s404.git"
+  },
+  "keywords": [
+    "brain",
+    "game"
+  ],
+  "author": "roman",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/ramzesnic/project-lvl1-s404/issues"
+  },
+  "homepage": "https://github.com/ramzesnic/project-lvl1-s404#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3"
+  }
+}
