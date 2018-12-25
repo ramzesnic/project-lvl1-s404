@@ -1,2 +1,2 @@
-"!https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability!":https://codeclimate.com/github/codeclimate/codeclimate/maintainability
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
+<a href="https://codeclimate.com/github/ramzesnic/project-lvl1-s404/maintainability"><img src="https://api.codeclimate.com/v1/badges/38656a6382f6aa9a5558/maintainability" /></a>
+<a href="https://codeclimate.com/github/ramzesnic/project-lvl1-s404/test_coverage"><img src="https://api.codeclimate.com/v1/badges/38656a6382f6aa9a5558/test_coverage" /></a>
