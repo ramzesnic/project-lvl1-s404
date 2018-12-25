@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import readline from '../index.js';
+import getAnswer from '..';
 
 console.log('Welcome to the Brain Games!');
-readline();
+getAnswer();
