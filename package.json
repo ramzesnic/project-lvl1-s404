@@ -1,6 +1,6 @@
 {
   "name": "brain-game-roman-prj",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Brain Games",
   "scripts": {
     "test": "jest",
@@ -12,7 +12,8 @@
     "url": "git+https://github.com/ramzesnic/project-lvl1-s404.git"
   },
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
