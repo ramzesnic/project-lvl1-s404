@@ -3,6 +3,8 @@ import readlineSync from 'readline-sync';
 const countRaund = 3;
 const min = 1;
 const max = 100;
+const title = '\nWelcome to the Brain Games!';
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const getName = () => readlineSync.question('\nMay I have your name? ');
 
@@ -11,8 +13,6 @@ const getRandom = () => Math.floor(Math.random() * (max - min)) + min;
 const isEven = question => question % 2 === 0;
 
 export const brainEven = () => {
-  const title = '\nWelcome to the Brain Games!';
-  const description = 'Answer "yes" if number even otherwise answer "no".';
   console.log(title);
   console.log(description);
   const name = getName();
