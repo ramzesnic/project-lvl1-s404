@@ -1,32 +1,40 @@
 import readlineSync from 'readline-sync';
 
-const getName = () => readlineSync.question('May I have your name? ');
+const countRaund = 3;
+const min = 1;
+const max = 100;
 
-const getRandom = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+const getName = () => readlineSync.question('\nMay I have your name? ');
+
+const getRandom = () => Math.floor(Math.random() * (max - min)) + min;
 
 const isEven = question => question % 2 === 0;
 
 export const brainEven = () => {
-  const countRaund = 3;
-  const min = 1;
-  const max = 100;
-  console.log('Welcome to the Brain Games!\nAnswer "yes" if number even otherwise answer "no".\n');
+  const title = '\nWelcome to the Brain Games!';
+  const description = 'Answer "yes" if number even otherwise answer "no".';
+  console.log(title);
+  console.log(description);
   const name = getName();
   console.log(`Hello, ${name}!\n`);
 
   const iter = (count) => {
-    if (count === 0) return `Congratulations, ${name}!`;
-    const question = getRandom(min, max);
+    if (count === 0) {
+      console.log(`Congratulations, ${name}!`);
+      return;
+    }
+    const question = getRandom();
     const trueAnswer = isEven(question) ? 'yes' : 'no';
     const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
     if (answer !== trueAnswer) {
       const message = `'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}.\n Let's try again, ${name}!'`;
-      return message;
+      console.log(message);
+      return;
     }
     console.log('Correct!');
-    return iter(count - 1);
+    iter(count - 1);
   };
-  return console.log(iter(countRaund));
+  return iter(countRaund);
 };
 
 export default getName;
