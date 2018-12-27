@@ -1,18 +1,13 @@
 import readlineSync from 'readline-sync';
 
 const countRaund = 3;
-const min = 1;
-const max = 100;
 const title = '\nWelcome to the Brain Games!';
-const description = 'Answer "yes" if number even otherwise answer "no".';
 
-const getName = () => readlineSync.question('\nMay I have your name? ');
+export const getName = () => readlineSync.question('\nMay I have your name? ');
 
-const getRandom = () => Math.floor(Math.random() * (max - min)) + min;
+export const getRandom = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-const isEven = question => question % 2 === 0;
-
-export const brainEven = () => {
+export default (game, description) => {
   console.log(title);
   console.log(description);
   const name = getName();
@@ -23,11 +18,10 @@ export const brainEven = () => {
       console.log(`Congratulations, ${name}!`);
       return;
     }
-    const question = getRandom();
-    const trueAnswer = isEven(question) ? 'yes' : 'no';
-    const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
-    if (answer !== trueAnswer) {
-      const message = `'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}.\n Let's try again, ${name}!'`;
+    const result = game();
+    const answer = readlineSync.question(`Question: ${result.question}\nYour answer: `);
+    if (answer != result.trueAnswer) { // !== not work correct
+      const message = `'${answer}' is wrong answer ;(. Correct answer was '${result.trueAnswer}'.\n Let's try again, ${name}!'`;
       console.log(message);
       return;
     }
@@ -36,5 +30,3 @@ export const brainEven = () => {
   };
   return iter(countRaund);
 };
-
-export default getName;
