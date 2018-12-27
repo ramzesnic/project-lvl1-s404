@@ -1,6 +1,6 @@
 {
   "name": "brain-game-roman-prj",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Brain Games",
   "scripts": {
     "test": "jest",
@@ -13,7 +13,7 @@
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/din/brain-even.js",
+    "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [
