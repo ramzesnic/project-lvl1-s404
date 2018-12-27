@@ -20,7 +20,7 @@ export default (game, description) => {
     }
     const result = game();
     const answer = readlineSync.question(`Question: ${result.question}\nYour answer: `);
-    if (answer != result.trueAnswer) { // !== not work correct
+    if (answer !== result.trueAnswer) { // !== not work correct
       const message = `'${answer}' is wrong answer ;(. Correct answer was '${result.trueAnswer}'.\n Let's try again, ${name}!'`;
       console.log(message);
       return;
