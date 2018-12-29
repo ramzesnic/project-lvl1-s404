@@ -2,21 +2,22 @@ import engine from '..';
 import getRandom from '../utils';
 
 const description = 'What number is missing in the progression?';
-const lengthProgression = 10;
+const progressionLength = 10;
 
 const questionGenerator = (progression, index, step) => {
-  if (index === lengthProgression) return progression;
-  progression.push(progression[index - 1] + step);
-  return questionGenerator(progression, index + 1, step);
+  for (let i = index; i < progressionLength; i += 1) {
+    progression.push(progression[i - 1] + step);
+  }
+  return progression;
 };
 
 const game = () => {
   const start = getRandom(0, 100);
   const step = getRandom(1, 5);
-  const randomIndex = getRandom(0, 10);
+  const hiddenElementPosition = getRandom(0, progressionLength);
   const questionInit = questionGenerator([start], 1, step);
-  const trueAnswer = questionInit[randomIndex];
-  const question = questionInit.map((value, index) => (index === randomIndex ? '..' : value)).join(' ');
+  const trueAnswer = questionInit[hiddenElementPosition];
+  const question = questionInit.map((value, index) => (index === hiddenElementPosition ? '..' : value)).join(' ');
   return {
     question,
     trueAnswer,
