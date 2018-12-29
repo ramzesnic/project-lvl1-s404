@@ -1,4 +1,5 @@
-import engine, { getRandom } from '..';
+import engine from '..';
+import getRandom from '../utils';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 

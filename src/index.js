@@ -3,14 +3,12 @@ import readlineSync from 'readline-sync';
 const countRaund = 3;
 const title = '\nWelcome to the Brain Games!';
 
-export const getName = () => readlineSync.question('\nMay I have your name? ');
-
 export const getRandom = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 export default (game, description) => {
   console.log(title);
   console.log(description);
-  const name = getName();
+  const name = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${name}!\n`);
 
   const iter = (count) => {

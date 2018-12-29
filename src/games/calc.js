@@ -1,4 +1,5 @@
-import engine, { getRandom } from '..';
+import engine from '..';
+import getRandom from '../utils';
 
 const description = 'What is the result of the expression?';
 const operations = [
