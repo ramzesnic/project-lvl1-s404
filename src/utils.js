@@ -18,3 +18,5 @@ export const nod = (a, b) => {
   }
   return nod(a, b - a);
 };
+
+export const isEven = question => question % 2 === 0;
