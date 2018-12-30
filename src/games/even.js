@@ -1,7 +1,9 @@
 import engine from '..';
-import getRandom, { isEven } from '../utils';
+import getRandom from '../utils';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
+
+export const isEven = question => question % 2 === 0;
 
 const game = () => {
   const question = getRandom(1, 10);

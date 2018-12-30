@@ -1,7 +1,15 @@
 import engine from '..';
-import getRandom, { nod } from '../utils';
+import getRandom from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
+
+export const nod = (a, b) => {
+  if (a === b) return a;
+  if (a > b) {
+    return nod(a - b, b);
+  }
+  return nod(a, b - a);
+};
 
 const game = () => {
   const num1 = getRandom(1, 100);
