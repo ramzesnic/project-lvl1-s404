@@ -22,7 +22,7 @@ const game = () => {
   const b = getRandom(1, 10);
   const operation = operations[getRandom(0, 3)];
   const question = `${a} ${operation.operation} ${b}`;
-  const trueAnswer = operation.func(a, b);
+  const trueAnswer = operation.func(a, b).toString();
   return {
     question,
     trueAnswer,

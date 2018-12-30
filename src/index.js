@@ -14,12 +14,9 @@ export default (game, description) => {
       console.log(`Congratulations, ${name}!`);
       return;
     }
-    const {
-      question,
-      trueAnswer,
-    } = game();
+    const { question, trueAnswer } = game();
     const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
-    if (answer !== (trueAnswer).toString()) {
+    if (answer !== trueAnswer) {
       const message = `'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\n Let's try again, ${name}!'`;
       console.log(message);
       return;
